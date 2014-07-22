@@ -1,0 +1,82 @@
+
+{% block body %}
+<HEAD>
+ <TITLE> <b>Student details</b> </TITLE>
+ 
+
+<lin rel ='stylesheet' href="stylesheet/main.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+ </HEAD>     
+
+ <BODY>
+ <!-- Wrap all page content here -->
+<div id="wrap">
+  
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default" data-spy="affix" data-offset-top="60" data-offset-bottom="70" id="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Student Record</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="home">Home</a></li>
+          <li><a href="/rec">view</a></li>
+          <li><a href="/sef">search</a></li>
+          <li><a href="/stud">add</a></li>
+          <li><a href="/del">delete</a></li>          
+           
+
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+  
+  
+ <FORM method="post" action="/add">
+ <div id = "container">
+ <div align = "center">
+ <H1>Student details</H1>
+
+ <BR>NAME: <INPUT TYPE="text" NAME="name" ></BR>
+ <BR>MARK1: <INPUT TYPE="text" NAME="mark1" ></BR>
+
+ <BR>MARk2<INPUT TYPE="text" NAME="mark2" ><BR>
+
+ <br>TOTAL:<INPUT TYPE="text" NAME="total"></br>
+
+ <BR>GRADE:<INPUT TYPE="text" NAME="grade" ></BR>
+
+ <INPUT TYPE="submit">
+</div>
+ </div>
+ </FORM>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+ </BODY>
+
+ </HTML>
+
+
+
+
+
+
+
+
+
+
+
+{% endblock %}
+

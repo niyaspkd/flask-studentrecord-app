@@ -1,0 +1,43 @@
+from flask import Flask,render_template,g,request
+import sqlite3
+
+app = Flask(__name__)
+app.database='sample.db'
+conn=sqlite3.connect('sample.db')
+@app.route('/')
+def home():
+ return render_template('home.html')
+@app.route('/stu', methods=['GET', 'POST'])
+def stu():
+ g.db=connect_db()            
+ g.db.execute('INSERT INTO students (name,mark1,mark2,total,grade) VALUES(?,?,?,?,?)',[request.form['name'],request.form['mark1'],request.form['mark2'],request.form['total'],request.form['grade']]);
+ g.db.commit()
+ g.db.close()
+ return "sucess" 
+ 
+@app.route('/stud')
+def stud():
+ return render_template('stud.html')
+@app.route('/rec')
+def rec():
+ 
+ g.db = connect_db() 
+ cur = g.db.execute('select * from students')
+ for row in cur: 
+ 
+  
+  g.db.close()
+  return render_template('index.html',row=row) 
+ 
+ 
+
+  
+
+def connect_db():
+ return sqlite3.connect(app.database)
+
+
+
+
+if __name__ == '__main__':
+ app.run(debug=True)

@@ -1,0 +1,110 @@
+{% extends "stud.html" %}
+{% block body %}
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>student record</title>
+
+<lin rel ='stylesheet' href="/home/niyas/New Folder/main.css">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+</head>
+  
+<!-- Wrap all page content here -->
+<div id="wrap">
+  
+  <!-- Fixed navbar -->
+  <div class="navbar navbar-default" data-spy="affix" data-offset-top="60" data-offset-bottom="70" id="navbar">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Student Record</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/rec1">view</a></li>
+          <li><a href="/sef1">search</a></li>
+          
+          
+           
+
+            </ul>
+          </li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+ 
+
+
+
+
+  
+
+
+   
+
+
+
+
+
+</div>
+</div>
+ 
+</div>
+  </div><!-- /.container-
+
+
+
+
+
+
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<div align='center'>
+<h1>STUDENT RECORD</h1>
+{%for a,b,c,d,e in row%}
+
+<style>
+     table.equalDevide tr td { width:25%; }
+</style>
+<div align ='center'>
+<table class="equalDevide" cellpadding="1" cellspacing="0" width="70%" border="2px">
+<th>
+<tr>
+<td>NAME:{{a}}</td>
+
+<td>MARK1:{{b}}</td>
+
+
+<td>MARK2:{{c}}</td>
+
+
+<td>TOTAL:{{d}}</td>
+
+<td>GRADE:{{e}}</td>
+</tr>
+</th>
+</table>
+</div>
+
+
+</div>
+</div>
+</div>
+
+{% endfor %}
+{% endblock %}
+</body>
+</html>
+
+</html>

@@ -1,0 +1,51 @@
+.darkBG{
+ background:#999;
+}
+body {  
+background-image:url('images.jpeg');  
+margin: 0;  
+padding: 0;  
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;  
+color: #444;
+.navbar-custom {
+	background-color: #192f42;
+    color:#ffffff;
+  	border-radius:0;
+    min-height:auto;
+}
+  
+.navbar-custom .navbar-nav > li > a {
+  	color:#fff;
+  	padding-left:25px;
+  	padding-right:25px;
+    padding-top:20px;
+    padding-bottom:20px;
+}
+.navbar-custom .navbar-nav > .active > a, .navbar-nav > .active > a:hover, .navbar-nav > .active > a:focus {
+    color: #ffffff;
+	background-color:transparent;
+}
+      
+.navbar-custom .navbar-nav > li > a:hover, .nav > li > a:focus {
+    text-decoration: none;
+    background-color: #2a3f53;
+}
+      
+.navbar-custom .navbar-brand {
+   color:#eeeeee;
+   padding:20px;
+}
+
+.navbar-custom .navbar-toggle,
+.navbar-custom .nav .open>a, .navbar-custom .nav .open>a:hover, .navbar-custom .nav .open>a:focus {
+   background-color:transparent;
+}
+
+.navbar-custom .icon-bar {
+   border: 1px solid #fff;                
+}
+
+/*-- change navbar dropdown color --*/
+.navbar-custom .navbar-nav .open .dropdown-menu>li>a,.navbar-custom .navbar-nav .open .dropdown-menu {
+    color:#428bca;
+}
