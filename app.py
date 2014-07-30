@@ -1,4 +1,5 @@
 from flask import Flask,render_template,g,request,flash,redirect,url_for,session,flash
+import os
 from functools import wraps
 import sqlite3
 import os
@@ -19,9 +20,9 @@ conn=sqlite3.connect('sample.db')
 
 
 @app.route('/welcome')
+@login_required
 def welcome():
  return render_template('welcome.html')
-
 
 @app.route('/home')
 @login_required
@@ -35,12 +36,13 @@ def sef():
 @app.route('/sef1')
 def sef1():
  return render_template('search1.html')
-
 @app.route('/del')
+@login_required
 def delt():
  return render_template('del.html')
 
 @app.route('/stud', methods=['GET','POST'])
+@login_required
 def stud():
  return render_template('stud.html')
 
@@ -97,6 +99,7 @@ def logout():
  return redirect(url_for('login'))
 
 @app.route('/delete',methods=['POST'])
+@login_required
 def delete():
  g.db = connect_db()
  g.db.execute( "delete from students where name = ? ", (request.form['delete'],) )
@@ -107,6 +110,7 @@ def delete():
 
 
 @app.route('/add', methods=['POST'])
+@login_required
 def add():
  g.db=connect_db()
              
